@@ -1,7 +1,7 @@
 import React from "react"
-import { Environment,Lightformer ,spotLight} from "@react-three/drei"
+import { Environment,Lightformer,SpotLight} from "@react-three/drei"
  
-//threejs component
+
 const StudioLight = ()=>{
     return (
         <group name="lights">
@@ -16,15 +16,18 @@ const StudioLight = ()=>{
         rotateY={Math.PI/2}
         
         />
+        
         {/*we can create a another light source also*/}
 
         </group>
         </Environment>
-            <spotLight
-            position={[-2,10,5]}
-            angle={0.15} decay={0} intensity={Math.PI *0.2}>
 
-            </spotLight>
+            <SpotLight
+            position={[-2,10,5]}
+            angle={0.15} 
+            decay={0} 
+            intensity={Math.PI*3}
+            />
             {/* same as lightformer we can use it multiple time in multiple postions */}
 
         </group>

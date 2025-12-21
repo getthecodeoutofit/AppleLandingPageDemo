@@ -1,7 +1,49 @@
-import React from "react";
+import { PresentationControls } from "@react-three/drei";
+import React, { useRef } from "react";
+import { MacbookModel16 } from "../models/Macbook-16";
+import MacbookModel14 from "../models/Macbook-14";
 //handle the transition b/w the model, detecting the size and animating model using gsap and use presentation control
 
-const ModelSwitcher = () => {
+const ModelSwitcher = ({scale ,isMob}) => {
+
+    const smallMacref = useRef();
+    const largeMacref = useRef();
+    const showLMac = scale === 0.08 || scale ===0.05;
+    const controlConfi = {
+        snap:true,
+        speed:2,
+        zoom:1,
+        polar:[-Math.PI,Math.PI],
+        azimuth:[-Infinity,Infinity]
+
+
+
+    }
+
+
+
+    return (
+        <>
+        <PresentationControls {...controlConfi}>
+            <group ref={largeMacref}>
+            <MacbookModel16 scale={isMob?0.05:0.08}>
+
+            </MacbookModel16>
+            </group>
+        </PresentationControls>
+
+        <PresentationControls {...controlConfi}>
+            <group ref={smallMacref}>
+            <MacbookModel14 scale={isMob?0.03:0.06}>
+
+            </MacbookModel14>
+            </group>
+        </PresentationControls>
+        
+        </>
+
+    )
+
 
 
 }

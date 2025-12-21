@@ -55,13 +55,13 @@ const ProductViewer = ()=>{
                 {/* <ambientLight intensity={2}></ambientLight> */}
                 <StudioLight/>
 
-                <MacbookModel14 scale={0.06} position={[0,0,0]}/>
-                
-                {/* <OrbitControls enableZoom={false}> */}
+                {/* <MacbookModel14 scale={0.06} position={[0,0,0]}/> */}
 
-                {/* </OrbitControls>
-                 */}
-                 <ModelSwitcher scale={isMob ? scale-0.03 : scale}/>
+                {/* <OrbitControls enableZoom={false}>
+
+                </OrbitControls> */}
+                
+                 <ModelSwitcher scale={isMob ? scale-0.03 : scale} isMob={isMob}/>
 
             </Canvas>
 
