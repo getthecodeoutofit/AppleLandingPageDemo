@@ -6,6 +6,21 @@ import MacbookModel14 from "../models/Macbook-14";
 
 const ModelSwitcher = ({scale ,isMob}) => {
 
+    //helper funtion
+    const ANIMATION_DURATION = 1;
+    const OFFSET_DISTANCE = 5; //how far one model move when offscreen
+
+
+    //move
+    const fadMess = (group,opacity)=>{
+        if(!group)  return;
+        group.traverse((child.isMesh)=>{
+            child 
+
+        })
+    }
+
+
     const smallMacref = useRef();
     const largeMacref = useRef();
     const showLMac = scale === 0.08 || scale ===0.05;
@@ -14,11 +29,10 @@ const ModelSwitcher = ({scale ,isMob}) => {
         speed:2,
         zoom:1,
         polar:[-Math.PI,Math.PI],
-        azimuth:[-Infinity,Infinity]
-
-
-
+        azimuth:[-Infinity,Infinity],
+        config:{mass:1,tension:0,friction:26}
     }
+
 
 
 
