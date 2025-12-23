@@ -23,7 +23,7 @@ const ProductViewer = ()=>{
             <div className="controls">
 
                 <p className="info">
-                    MAC {scale}  {color}</p>
+                    MACBOOK PRO available in 14" and 16"</p>
                 <div className="flex-center gap-5 mt-5">
 
                 <div className="color-control">
@@ -37,13 +37,13 @@ const ProductViewer = ()=>{
 
                 <div className="size-control">
 
-                    <div onClick={()=>setScale(0.06)} className={clsx(scale===0.06? 'bg-white bg-black' :'bg-transparent text-white')}>
+                    <div onClick={()=>setScale(0.06)} className={clsx(scale===0.06? 'bg-white text-black' :'bg-transparent text-white')}>
                         <p>
                             14"
                         </p>
                     </div>
                     <div onClick={()=>setScale(0.08)} 
-                    className={clsx(scale===0.08? 'bg-white bg-black':'bg-transparent text-white')}>
+                    className={clsx(scale===0.08? 'bg-white text-black':'bg-transparent text-white')}>
                         <p>16"</p>
                     </div>
                 </div>
